@@ -79,8 +79,8 @@ export default function Contact() {
   return (
     <section id="recruiter" className="py-20 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute top-1/3 -left-96 w-96 h-96 bg-red-500/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 -right-96 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/3 -left-96 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 -right-96 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container max-w-7xl mx-auto relative z-10">
         <motion.div
@@ -104,7 +104,7 @@ export default function Contact() {
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.2 }}
-            className="glass-effect rounded-2xl p-8 border border-white/10"
+            className="glass-effect rounded-2xl p-8 border border-slate-200/80 dark:border-slate-600/50"
           >
             <h3 className="text-2xl font-bold mb-6">Send me a message</h3>
 
@@ -112,7 +112,7 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name input */}
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2 text-slate-300">
+                  <label htmlFor="name" className="block text-sm font-medium mb-2 text-slate-700 dark:text-slate-200">
                     Name
                   </label>
                   <motion.input
@@ -124,13 +124,13 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     placeholder="Your name"
-                    className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/20 text-white placeholder-slate-500 focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/50 transition-all"
+                    className="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-800/80 border border-slate-300 dark:border-slate-600 text-slate-900 dark:text-slate-100 placeholder-slate-500 dark:placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/50 transition-all"
                   />
                 </div>
 
                 {/* Email input */}
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2 text-slate-300">
+                  <label htmlFor="email" className="block text-sm font-medium mb-2 text-slate-700 dark:text-slate-200">
                     Email
                   </label>
                   <motion.input
@@ -142,13 +142,13 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     placeholder="your@email.com"
-                    className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/20 text-white placeholder-slate-500 focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/50 transition-all"
+                    className="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-800/80 border border-slate-300 dark:border-slate-600 text-slate-900 dark:text-slate-100 placeholder-slate-500 dark:placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/50 transition-all"
                   />
                 </div>
 
                 {/* Message input */}
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2 text-slate-300">
+                  <label htmlFor="message" className="block text-sm font-medium mb-2 text-slate-700 dark:text-slate-200">
                     Message
                   </label>
                   <motion.textarea
@@ -160,7 +160,7 @@ export default function Contact() {
                     required
                     rows={5}
                     placeholder="Tell me about your project or opportunity..."
-                    className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/20 text-white placeholder-slate-500 focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/50 transition-all resize-none"
+                    className="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-800/80 border border-slate-300 dark:border-slate-600 text-slate-900 dark:text-slate-100 placeholder-slate-500 dark:placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/50 transition-all resize-none"
                   />
                 </div>
 
@@ -169,7 +169,7 @@ export default function Contact() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   disabled={isLoading}
-                  className="w-full py-3 rounded-lg bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-red-600/50 disabled:opacity-50 transition-all"
+                  className="w-full py-3 rounded-lg bg-gradient-to-r from-primary-600 to-cyan-600 text-white font-semibold flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-primary-500/40 disabled:opacity-50 transition-all"
                 >
                   {isLoading ? (
                     <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -194,7 +194,7 @@ export default function Contact() {
                   <CheckCircle size={48} className="text-green-400 mb-4" />
                 </motion.div>
                 <h4 className="text-xl font-bold mb-2">Message sent!</h4>
-                <p className="text-slate-400">Thanks for reaching out. I'll get back to you soon.</p>
+                <p className="text-slate-600 dark:text-slate-300">Thanks for reaching out. I'll get back to you soon.</p>
               </motion.div>
             ) : (
               <motion.div
@@ -206,10 +206,10 @@ export default function Contact() {
                   animate={{ scale: [1, 1.2, 1] }}
                   transition={{ duration: 0.6 }}
                 >
-                  <AlertCircle size={48} className="text-red-400 mb-4" />
+                  <AlertCircle size={48} className="text-primary-400 mb-4" />
                 </motion.div>
                 <h4 className="text-xl font-bold mb-2">Oops! Something went wrong</h4>
-                <p className="text-slate-400 mb-4">Please try again or email me directly at yadanaparthivineethreddy@gmail.com</p>
+                <p className="text-slate-600 dark:text-slate-300 mb-4">Please try again or email me directly at yadanaparthivineethreddy@gmail.com</p>
               </motion.div>
             )}
           </motion.div>
@@ -234,14 +234,14 @@ export default function Contact() {
                       target={method.label === 'Location' ? '_blank' : undefined}
                       rel={method.label === 'Location' ? 'noreferrer' : undefined}
                       whileHover={{ x: 10 }}
-                      className="glass-effect rounded-lg p-4 border border-white/10 hover:border-violet-500/50 transition-all flex items-center gap-4"
+                      className="glass-effect rounded-lg p-4 border border-slate-200/80 dark:border-slate-600/50 hover:border-primary-500/50 transition-all flex items-center gap-4"
                     >
-                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-violet-500/20 to-cyan-500/20 flex items-center justify-center flex-shrink-0">
-                        <Icon className="w-5 h-5 text-violet-400" />
+                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-500/20 to-cyan-500/20 flex items-center justify-center flex-shrink-0">
+                        <Icon className="w-5 h-5 text-primary-400" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <p className="text-xs text-slate-500 uppercase tracking-wider">{method.label}</p>
-                        <p className="text-white font-medium truncate">{method.value}</p>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider">{method.label}</p>
+                        <p className="text-slate-900 dark:text-slate-100 font-medium truncate">{method.value}</p>
                       </div>
                     </motion.a>
                   )
@@ -254,10 +254,10 @@ export default function Contact() {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.4 }}
-              className="glass-effect rounded-xl p-6 border border-white/10"
+              className="glass-effect rounded-xl p-6 border border-slate-200/80 dark:border-slate-600/50"
             >
               <h4 className="text-lg font-bold mb-4">For Recruiters 🎯</h4>
-              <p className="text-slate-300 text-sm mb-6">
+              <p className="text-slate-700 dark:text-slate-200 text-sm mb-6">
                 I'm actively open to opportunities in backend engineering, microservices architecture, and platform modernization roles.
               </p>
               <div className="space-y-3 mb-6">
@@ -265,14 +265,14 @@ export default function Contact() {
                   '4+ years in Java/Spring Boot microservices',
                   'Platform modernization & performance optimization',
                   'Camunda BPM workflow automation',
-                  'Fintech & banking domain expertise'
+                  'Banking & trading domain expertise'
                 ].map((item, i) => (
                   <motion.p
                     key={i}
                     initial={{ opacity: 0, x: -20 }}
                     animate={inView ? { opacity: 1, x: 0 } : {}}
                     transition={{ delay: 0.5 + i * 0.1 }}
-                    className="text-slate-300 text-sm"
+                    className="text-slate-300 dark:text-slate-200 text-sm"
                   >
                     {item}
                   </motion.p>
@@ -280,10 +280,10 @@ export default function Contact() {
               </div>
               <motion.a
                 href="/vineeth_resume.pdf"
-                download
+                download="Vineeth_Reddy_Resume.pdf"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-violet-500/20 to-cyan-500/20 border border-violet-500/50 text-violet-300 font-medium hover:bg-gradient-to-r hover:from-violet-500/40 hover:to-cyan-500/40 transition-all"
+                className="inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-primary-500/20 to-cyan-500/20 border border-primary-500/50 text-primary-200 dark:text-primary-300 font-medium hover:bg-gradient-to-r hover:from-primary-500/40 hover:to-cyan-500/40 transition-all"
               >
                 Download Resume (ATS)
               </motion.a>
@@ -294,7 +294,7 @@ export default function Contact() {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.5 }}
-              className="glass-effect rounded-xl p-6 border border-white/10"
+              className="glass-effect rounded-xl p-6 border border-slate-200/80 dark:border-slate-600/50"
             >
               <h4 className="text-lg font-bold mb-4">Connect with me</h4>
               <div className="grid grid-cols-2 gap-3">
@@ -309,7 +309,7 @@ export default function Contact() {
                     rel="noreferrer"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="p-3 rounded-lg glass-effect border border-white/10 hover:border-violet-500/50 text-center font-medium transition-all text-sm"
+                    className="p-3 rounded-lg glass-effect border border-slate-200/80 dark:border-slate-600/50 hover:border-primary-500/50 text-center font-medium transition-all text-sm text-slate-800 dark:text-slate-200"
                   >
                     {social.name}
                   </motion.a>

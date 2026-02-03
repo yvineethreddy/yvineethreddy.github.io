@@ -22,7 +22,7 @@ export default function About() {
     <section id="about" aria-labelledby="about-title" className="py-20 relative overflow-hidden">
       {/* Background gradients */}
       <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-violet-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary-500/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container max-w-6xl mx-auto relative z-10">
         <motion.div
@@ -36,7 +36,7 @@ export default function About() {
             <span className="gradient-text">About Me</span>
           </h2>
           <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl">
-            Backend-focused engineer with a passion for building resilient, scalable systems
+            Backend-focused Java developer with 4+ years designing and building highly available microservices for banking and financial markets.
           </p>
         </motion.div>
 
@@ -51,13 +51,13 @@ export default function About() {
             className="lg:col-span-2 space-y-6"
           >
             {/* Profile card */}
-            <div className="glass-effect rounded-2xl p-8 border border-white/10">
+            <div className="glass-effect rounded-2xl p-8 border border-slate-200/80 dark:border-slate-600/50">
               <div className="flex flex-col md:flex-row gap-8 items-start md:items-center">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   className="relative flex-shrink-0"
                 >
-                  <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden border-2 border-gradient-to-r from-violet-500 to-cyan-500 p-0.5 bg-gradient-to-r from-violet-500 to-cyan-500">
+                  <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden border-2 border-primary-500/50 p-0.5 bg-gradient-to-r from-primary-500 to-cyan-500">
                     <img
                       src="/vineeth-profile.jpg"
                       alt="Vineeth Reddy Yadanaparthi"
@@ -73,12 +73,12 @@ export default function About() {
                     transition={{ delay: 0.2 }}
                   >
                     <h3 className="text-2xl font-bold mb-2">Vineeth Reddy Yadanaparthi</h3>
-                    <p className="text-violet-400 font-semibold mb-4">Associate Consultant @ Infosys</p>
-                    <p className="text-slate-400 leading-relaxed mb-6">
-                      I'm a backend-focused full-stack developer specializing in Java, Spring Boot, and microservices. 
-                      With 4+ years of experience in fintech and banking, I've built high-performance systems handling 
-                      millions of transactions daily. I'm passionate about clean architecture, performance optimization, 
-                      and mentoring junior engineers.
+                    <p className="text-primary-600 dark:text-primary-400 font-semibold mb-4">Associate Consultant @ Infosys</p>
+                    <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+                      I design and build resilient, scalable systems with Java, Spring Boot, and microservices. 
+                      With 4+ years in banking and trading (Danske Bank, Bankhaus Scheich), I've modernized legacy platforms, 
+                      reduced API latency by ~30%, and delivered end-to-end ownership from development to L3 production support. 
+                      I focus on fault tolerance, performance optimization, and secure API design in Agile environments.
                     </p>
                     <div className="flex flex-wrap gap-3">
                       <motion.a
@@ -107,14 +107,14 @@ export default function About() {
                   <motion.div
                     key={i}
                     whileHover={{ translateY: -5 }}
-                    className="glass-effect rounded-xl p-4 text-center border border-white/10 hover:border-violet-500/50 transition-colors"
+                    className="glass-effect rounded-xl p-4 text-center border border-slate-200/80 dark:border-slate-600/50 hover:border-primary-500/50 transition-colors"
                   >
-                    <Icon className="w-6 h-6 mx-auto mb-2 text-violet-400" />
+                    <Icon className="w-6 h-6 mx-auto mb-2 text-primary-400" />
                     <div className="text-2xl font-bold text-white">
                       {stat.value}
-                      <span className="text-violet-400">{stat.suffix}</span>
+                      <span className="text-primary-400">{stat.suffix}</span>
                     </div>
-                    <p className="text-xs text-slate-400 mt-1">{stat.label}</p>
+                    <p className="text-xs text-slate-600 dark:text-slate-300 mt-1">{stat.label}</p>
                   </motion.div>
                 )
               })}
@@ -129,9 +129,9 @@ export default function About() {
             className="space-y-6"
           >
             {/* Core competencies */}
-            <div className="glass-effect rounded-xl p-6 border border-white/10">
+            <div className="glass-effect rounded-xl p-6 border border-slate-200/80 dark:border-slate-600/50">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <Zap className="w-5 h-5 text-cyan-400" />
+                <Zap className="w-5 h-5 text-primary-400" />
                 Core Competencies
               </h3>
               <ul className="space-y-3 text-sm">
@@ -150,9 +150,9 @@ export default function About() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={inView ? { opacity: 1, x: 0 } : {}}
                     transition={{ delay: 0.3 + i * 0.05 }}
-                    className="flex items-center gap-2 text-slate-300"
+                    className="flex items-center gap-2 text-slate-700 dark:text-slate-200"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-violet-500 to-cyan-500" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-primary-500 to-cyan-500" />
                     {item}
                   </motion.li>
                 ))}
@@ -160,12 +160,12 @@ export default function About() {
             </div>
 
             {/* Key achievements */}
-            <div className="glass-effect rounded-xl p-6 border border-white/10">
+            <div className="glass-effect rounded-xl p-6 border border-slate-200/80 dark:border-slate-600/50">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                 <Award className="w-5 h-5 text-yellow-400" />
                 Key Achievements
               </h3>
-              <ul className="space-y-3 text-sm text-slate-300">
+              <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-200">
                 {[
                   '📊 Reduced latency by 40% through optimization',
                   '🚀 Deployed 15+ production features',

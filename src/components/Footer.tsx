@@ -12,6 +12,8 @@ export default function Footer() {
   const footerLinks = [
     { name: 'Home', href: '#hero' },
     { name: 'About', href: '#about' },
+    { name: 'Strengths', href: '#powers' },
+    { name: 'Skills', href: '#skills' },
     { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#recruiter' }
@@ -35,13 +37,13 @@ export default function Footer() {
           >
             <div className="flex items-center gap-3 mb-4">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden>
-                <rect width="24" height="24" rx="6" fill="#7C3AED" />
+                <rect width="24" height="24" rx="6" fill="#0d9488" />
                 <path d="M7 15.5V8.5L12 12L17 8.5V15.5" stroke="#fff" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
               <span className="font-bold text-lg">Vineeth</span>
             </div>
-            <p className="text-slate-400 text-sm">
-              Backend engineer building resilient, scalable systems.
+            <p className="text-slate-600 dark:text-slate-300 text-sm">
+              Backend engineer · Java, Spring Boot, Microservices · Building for production.
             </p>
           </motion.div>
 
@@ -58,7 +60,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-slate-400 hover:text-violet-400 transition-colors text-sm"
+                    className="text-slate-600 dark:text-slate-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors text-sm"
                   >
                     {link.name}
                   </a>
@@ -104,17 +106,17 @@ export default function Footer() {
           >
             <h4 className="font-semibold mb-4">Get In Touch</h4>
             <div className="space-y-3 text-sm">
-              <p className="text-slate-400">
-                <a href="mailto:yadanaparthivineethreddy@gmail.com" className="hover:text-violet-400 transition-colors">
+              <p className="text-slate-600 dark:text-slate-300">
+                <a href="mailto:yadanaparthivineethreddy@gmail.com" className="hover:text-primary-400 transition-colors">
                   yadanaparthivineethreddy@gmail.com
                 </a>
               </p>
-              <p className="text-slate-400">
-                <a href="tel:+917036546590" className="hover:text-violet-400 transition-colors">
+              <p className="text-slate-600 dark:text-slate-300">
+                <a href="tel:+917036546590" className="hover:text-primary-400 transition-colors">
                   +91 7036546590
                 </a>
               </p>
-              <p className="text-slate-400">Bangalore, India</p>
+              <p className="text-slate-600 dark:text-slate-300">Bangalore, India</p>
             </div>
           </motion.div>
         </div>
@@ -133,7 +135,7 @@ export default function Footer() {
           <p className="text-slate-400 text-sm">
             © {currentYear} Vineeth Reddy Yadanaparthi. Built with{' '}
             <span className="inline-flex items-center gap-1">
-              <Heart size={14} className="text-red-500" />
+              <Heart size={14} className="text-primary-500" />
               React + Tailwind
             </span>
           </p>
@@ -150,7 +152,7 @@ export default function Footer() {
                   rel="noreferrer"
                   whileHover={{ scale: 1.15, translateY: -2 }}
                   whileTap={{ scale: 0.9 }}
-                  className="w-9 h-9 rounded-lg glass-effect flex items-center justify-center text-slate-400 hover:text-violet-400 transition-colors border border-white/10"
+                  className="w-9 h-9 rounded-lg glass-effect flex items-center justify-center text-slate-400 dark:text-slate-300 hover:text-primary-400 transition-colors border border-white/10 dark:border-slate-600/50"
                   aria-label={social.label}
                 >
                   <Icon size={18} />
@@ -163,7 +165,7 @@ export default function Footer() {
               onClick={scrollToTop}
               whileHover={{ scale: 1.15, translateY: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-9 h-9 rounded-lg glass-effect flex items-center justify-center text-slate-400 hover:text-cyan-400 transition-colors border border-white/10"
+              className="w-9 h-9 rounded-lg glass-effect flex items-center justify-center text-slate-600 dark:text-slate-300 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors border border-slate-200 dark:border-slate-600/50"
               aria-label="Back to top"
             >
               <ArrowUp size={18} />
