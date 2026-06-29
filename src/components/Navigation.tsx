@@ -1,20 +1,22 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useScrollDirection, useScrollPosition } from '../hooks/useScroll'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Moon, Sun } from 'lucide-react'
+import { useTheme } from '../context/ThemeContext'
 
 export default function Navigation() {
   const scrollDirection = useScrollDirection()
   const scrollPosition = useScrollPosition()
+  const { theme, toggleTheme } = useTheme()
   const [isOpen, setIsOpen] = useState(false)
 
   const navLinks = [
     { name: 'Home', href: '#hero' },
     { name: 'About', href: '#about' },
-    { name: 'Strengths', href: '#powers' },
-    { name: 'Skills', href: '#skills' },
     { name: 'Experience', href: '#experience' },
+    { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
+    { name: 'Resume', href: '#resume' },
     { name: 'Contact', href: '#recruiter' }
   ]
 
@@ -22,7 +24,6 @@ export default function Navigation() {
   const isHidden = scrollDirection === 'down' && scrollPosition > 300
 
   useEffect(() => {
-    // Close mobile menu on resize
     const handleResize = () => {
       if (window.innerWidth >= 768) {
         setIsOpen(false)
@@ -50,8 +51,7 @@ export default function Navigation() {
           isHidden ? 'translate-y-full' : 'translate-y-0'
         } ${isScrolled ? 'glass-effect border-b border-slate-200 dark:border-slate-600/50' : ''}`}
       >
-        <nav className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-          {/* Logo */}
+        <nav className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between gap-3">
           <motion.a
             href="#hero"
             whileHover={{ scale: 1.05 }}
@@ -65,7 +65,6 @@ export default function Navigation() {
             <span className="font-bold text-lg hidden sm:inline">VINEETH</span>
           </motion.a>
 
-          {/* Desktop Navigation */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -85,9 +84,18 @@ export default function Navigation() {
             ))}
           </motion.div>
 
-          {/* Right side controls */}
-          <div className="flex items-center gap-4">
-            {/* Contact button */}
+          <div className="flex items-center gap-3">
+            <motion.button
+              type="button"
+              onClick={toggleTheme}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="hidden sm:inline-flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200/80 bg-slate-950/80 text-slate-100 transition hover:border-primary-500/40"
+              aria-label="Toggle theme"
+            >
+              {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+            </motion.button>
+
             <motion.a
               href="#recruiter"
               onClick={() => handleNavClick('#recruiter')}
@@ -98,7 +106,6 @@ export default function Navigation() {
               Get In Touch
             </motion.a>
 
-            {/* Mobile menu button */}
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
@@ -111,7 +118,6 @@ export default function Navigation() {
           </div>
         </nav>
 
-        {/* Mobile menu */}
         <motion.div
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: isOpen ? 1 : 0, height: isOpen ? 'auto' : 0 }}
@@ -130,6 +136,13 @@ export default function Navigation() {
                 {link.name}
               </motion.a>
             ))}
+            <motion.button
+              type="button"
+              onClick={toggleTheme}
+              className="w-full rounded-lg border border-slate-700 bg-slate-950/90 px-4 py-2 text-left text-sm text-slate-200 hover:border-cyan-500/40 transition"
+            >
+              Toggle theme
+            </motion.button>
             <motion.a
               href="#recruiter"
               onClick={() => handleNavClick('#recruiter')}
@@ -142,7 +155,6 @@ export default function Navigation() {
         </motion.div>
       </motion.header>
 
-      {/* Spacer for fixed header */}
       {isScrolled && <div className="h-20" />}
     </>
   )

@@ -2,49 +2,44 @@ export interface ExperienceItem {
   year: string
   role: string
   company: string
-  client?: string
   description: string
   achievements?: string[]
 }
 
 export const experienceData: ExperienceItem[] = [
   {
-    year: 'Aug 2024 – Present',
+    year: 'Apr 2026 – Present',
+    role: 'Consultant',
+    company: 'KPMG',
+    description: 'Delivering healthcare platform services with Java, Spring Boot, and event-driven architecture. Focused on API contracts, service reliability, and measurable operational improvements.',
+    achievements: [
+      'Built resilient healthcare workflow APIs with production-level monitoring',
+      'Standardized fault handling for inter-service communication',
+      'Improved deployment cadence through automation and validation',
+    ]
+  },
+  {
+    year: 'Aug 2024 – Mar 2026',
     role: 'Associate Consultant',
-    company: 'Infosys Ltd',
-    client: 'Danske Bank — Banking Domain',
-    description: 'Designing and developing scalable microservices using Java 21 and Spring Boot for banking platforms supporting financial market workflows. Full ownership from development through testing, deployment, and production support (L3).',
+    company: 'Infosys',
+    description: 'Designed enterprise banking microservices and delivered API-first solutions with Spring Boot, asynchronous messaging, and observability.',
     achievements: [
-      'Modernized legacy Java 8 services to Java 21, reducing API latency by ~30%',
-      'Implemented asynchronous communication with RabbitMQ for resilience and throughput',
-      'Applied fault-tolerance patterns (Resilience4j: timeouts, retries, circuit breakers)',
-      'Optimized database interactions and query performance for PostgreSQL-backed services',
+      'Led service decomposition for a banking middleware platform',
+      'Reduced latency with database tuning and optimized caching',
+      'Introduced resilience patterns for RabbitMQ-based flows',
     ]
   },
   {
-    year: 'Oct 2021 – Jun 2024',
+    year: 'Oct 2021 – Jul 2024',
     role: 'Java Full Stack Developer',
-    company: 'DBQ Technologies Pvt. Ltd',
-    client: 'Bankhaus Scheich — Trading Automation Platform',
-    description: 'Built backend microservices for trading automation using Java, Spring Boot, and event-driven messaging. Developed internal dashboards with React and integrated Camunda BPM for approval and trade workflows.',
+    company: 'DBQ Technologies',
+    description: 'Built trading automation tools and operations dashboards using Java, React, and event-driven backends. Delivered features from design through support.',
     achievements: [
-      'Implemented secure REST APIs for order processing and trade lifecycle management',
-      'Integrated Camunda BPM, reducing manual intervention by 15%',
-      'Improved database performance through schema tuning, indexing, and query optimization',
-      'Delivered features end-to-end in Agile sprint-based delivery',
+      'Implemented secure trade lifecycle APIs and reconciliation workflows',
+      'Improved data integrity with schema design and audit logging',
+      'Delivered operator dashboards for real-time visibility',
     ]
   },
-  {
-    year: 'May 2021 – Sep 2021',
-    role: 'Intern',
-    company: 'DBQ Technologies Pvt. Ltd',
-    description: 'Assisted in backend and frontend development of internal tools using Java and React. Fixed production bugs and improved UI/UX for internal applications.',
-    achievements: [
-      'Built and maintained Java + React components',
-      'Improved build time and developer experience',
-      'Learned production best practices and deployment workflows',
-    ]
-  }
 ]
 
 export interface ProjectItem {
@@ -52,8 +47,10 @@ export interface ProjectItem {
   title: string
   description: string
   longDescription: string
+  architecture: string
+  features: string[]
+  stack: string[]
   image: string
-  tags: string[]
   links: {
     github?: string
     live?: string
@@ -62,31 +59,61 @@ export interface ProjectItem {
 
 export const projectsData: ProjectItem[] = [
   {
-    id: 'collateral-validation',
-    title: 'Collateral Validation Platform',
-    description: 'Microservices for validating financial assets and collateral data',
-    longDescription: 'Developed microservices for validating financial assets and collateral data at Danske Bank. Migrated core modules to Java 21, improved service reliability, and introduced fault-tolerant patterns to handle downstream system failures.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop',
-    tags: ['Java 21', 'Spring Boot', 'PostgreSQL', 'Resilience4j', 'Microservices'],
-    links: {}
+    id: 'healthcare-platform',
+    title: 'Healthcare Platform Modernization',
+    description: 'A resilient service foundation for healthcare workflows, data validation, and API integration.',
+    longDescription: 'Modernized a healthcare platform by building Java microservices with Spring Boot, observability, and automated delivery to Kubernetes.',
+    architecture: 'API gateway, event-driven worker pipelines, PostgreSQL storage, and centralized monitoring.',
+    features: [
+      'Service contract design for patient and claims APIs',
+      'Resilient messaging with RabbitMQ and retry policies',
+      'Schema versioning and database performance tuning',
+      'CI/CD pipelines for automated build, test, and deployment',
+    ],
+    stack: ['Java 21', 'Spring Boot', 'PostgreSQL', 'RabbitMQ', 'GitHub Actions'],
+    image: 'https://images.unsplash.com/photo-1562564055-71e051d8d8c3?w=1200&h=800&fit=crop',
+    links: {
+      github: 'https://github.com/yvineethreddy',
+      live: 'https://yvineethreddy.github.io/'
+    }
   },
   {
-    id: 'lpmm-trading',
-    title: 'LPMM Trading Automation',
-    description: 'Secure order flows and asynchronous processing for trade lifecycle',
-    longDescription: 'Implemented secure order flows and asynchronous processing using RabbitMQ at Bankhaus Scheich. Supported full trade lifecycle from capture to execution with event-driven architecture.',
-    image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=500&fit=crop',
-    tags: ['Java', 'Spring Boot', 'RabbitMQ', 'REST APIs', 'Camunda'],
-    links: {}
+    id: 'banking-api-framework',
+    title: 'Banking API Framework',
+    description: 'A secure banking service layer for enterprise transactions and workflow orchestration.',
+    longDescription: 'Built a reusable banking API framework with Spring Boot and secure REST design, reducing integration effort for downstream services.',
+    architecture: 'REST services, centralized auth, database access layer, and observability dashboards.',
+    features: [
+      'Secure REST endpoints with structured payload validation',
+      'Automated error handling and tracing for production support',
+      'Database query optimization with indexes and caching',
+      'Reusable service templates for new product onboarding',
+    ],
+    stack: ['Java', 'Spring Boot', 'PostgreSQL', 'OpenTelemetry', 'Docker'],
+    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=800&fit=crop',
+    links: {
+      github: 'https://github.com/yvineethreddy',
+      live: 'https://yvineethreddy.github.io/'
+    }
   },
   {
-    id: 'fincentives',
-    title: 'Fincentives — Regulated eScrip Platform',
-    description: 'Identity validation and transaction integrity with government systems',
-    longDescription: 'Integrated with external government systems for identity validation. Improved audit logging, reconciliation, and transaction integrity for a regulated eScrip platform.',
-    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=500&fit=crop',
-    tags: ['Java', 'Spring Boot', 'Integration', 'Audit', 'Security'],
-    links: {}
+    id: 'trading-engine',
+    title: 'Trading Automation Engine',
+    description: 'A trade lifecycle engine with asynchronous processing and operational visibility.',
+    longDescription: 'Created a trading automation engine for event-driven order handling, reconciliation, and workflow approval.',
+    architecture: 'Message broker orchestration with service isolation, audit logging, and dashboard automation.',
+    features: [
+      'Event-based order processing with reliability controls',
+      'Real-time reconciliation and logging for audit compliance',
+      'Approval workflows backed by Camunda BPM',
+      'Operator dashboards for trade monitoring',
+    ],
+    stack: ['Java', 'Spring Boot', 'Camunda', 'RabbitMQ', 'React'],
+    image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&h=800&fit=crop',
+    links: {
+      github: 'https://github.com/yvineethreddy',
+      live: 'https://yvineethreddy.github.io/'
+    }
   },
 ]
 

@@ -28,7 +28,7 @@ export default function Recruiter() {
         <aside className="bg-gradient-to-br from-[#071025] to-[#08102a] text-white p-6 rounded-lg">
           <h3 className="font-medium">Quick Notes for Recruiters</h3>
           <ul className="mt-3 text-sm space-y-2">
-            <li>4+ years building resilient Java/Spring microservices.</li>
+            <li>5+ years building resilient Java/Spring microservices.</li>
             <li>Experience in platform modernization, performance tuning, and workflow automation with Camunda BPM.</li>
             <li>ATS-optimized resume & a Tech Radar for immediate skills triage.</li>
           </ul>

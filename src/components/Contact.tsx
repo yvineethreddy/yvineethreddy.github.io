@@ -262,7 +262,7 @@ export default function Contact() {
               </p>
               <div className="space-y-3 mb-6">
                 {[
-                  '4+ years in Java/Spring Boot microservices',
+                  '5+ years in Java/Spring Boot microservices',
                   'Platform modernization & performance optimization',
                   'Camunda BPM workflow automation',
                   'Banking & trading domain expertise'

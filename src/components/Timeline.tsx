@@ -27,7 +27,7 @@ export default function Timeline() {
             <span className="gradient-text">Career Journey</span>
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400 max-w-xl">
-            4+ years across banking and trading platforms, with full ownership from development to production support.
+            5+ years across healthcare, banking, and trading platforms, with full ownership from development to production support.
           </p>
         </motion.div>
 
@@ -65,11 +65,6 @@ export default function Timeline() {
                             <h3 className="text-lg md:text-xl font-bold text-slate-800 dark:text-white">
                               {exp.company}
                             </h3>
-                            {exp.client && (
-                              <span className="text-xs text-slate-600 dark:text-slate-400 font-medium">
-                                {exp.client}
-                              </span>
-                            )}
                           </div>
                           <p className="text-primary-600 dark:text-primary-400 font-medium text-sm md:text-base">
                             {exp.role}
@@ -144,10 +139,10 @@ export default function Timeline() {
           className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4"
         >
           {[
-            { label: 'Years', value: '4+' },
-            { label: 'Companies', value: '2' },
-            { label: 'Projects', value: '4+' },
-            { label: 'Domain', value: 'Banking' },
+            { label: 'Years', value: '5+' },
+            { label: 'Companies', value: '3' },
+            { label: 'Projects', value: '6+' },
+            { label: 'Domain', value: 'Healthcare' },
           ].map((item, i) => (
             <div
               key={i}
