@@ -1,24 +1,8 @@
-"use client";
-
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { skillsData, coreStack, domainExpertise } from "../data";
 import { ChevronRight, Zap } from "lucide-react";
-
-const levelColors: Record<string, string> = {
-  Expert: "bg-primary-500/15 dark:bg-primary-500/20 text-primary-600 dark:text-primary-400 border-primary-500/30",
-  Advanced: "bg-cyan-500/10 dark:bg-cyan-500/20 text-cyan-600 dark:text-cyan-400 border-cyan-500/25",
-  Intermediate: "bg-slate-500/10 text-slate-600 dark:text-slate-400 border-slate-500/20",
-  Beginner: "bg-slate-500/5 text-slate-500 dark:text-slate-400 border-slate-500/15",
-};
-
-const levelBarWidth: Record<string, string> = {
-  Expert: "100%",
-  Advanced: "85%",
-  Intermediate: "65%",
-  Beginner: "40%",
-};
 
 export default function SkillsSection() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.08 });
@@ -43,7 +27,7 @@ export default function SkillsSection() {
             <span className="gradient-text">Skills &amp; Expertise</span>
           </h2>
           <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
-            Backend-first with strong foundations across databases, messaging, and observability.
+            Experience across Java services, frontend development, databases, cloud platforms, and application delivery.
           </p>
         </motion.div>
 
@@ -150,24 +134,9 @@ export default function SkillsSection() {
                   transition={{ delay: idx * 0.03, duration: 0.3 }}
                   className="group rounded-xl border border-slate-200 dark:border-slate-600/50 bg-white dark:bg-slate-700/30 hover:border-primary-500/30 hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-all duration-200 p-4 shadow-sm dark:shadow-none"
                 >
-                  <div className="flex items-start justify-between gap-3 mb-2">
-                    <p className="font-semibold text-slate-800 dark:text-white truncate">
-                      {skill.name}
-                    </p>
-                    <span
-                      className={`flex-shrink-0 px-2.5 py-0.5 rounded-md text-xs font-medium border ${levelColors[skill.level] ?? levelColors.Intermediate}`}
-                    >
-                      {skill.level}
-                    </span>
-                  </div>
-                  <div className="h-1 rounded-full bg-slate-200 dark:bg-slate-600/70 overflow-hidden mb-3">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={{ width: levelBarWidth[skill.level] ?? "65%" }}
-                      transition={{ delay: 0.1 + idx * 0.02, duration: 0.5, ease: "easeOut" }}
-                      className="h-full rounded-full bg-gradient-to-r from-primary-500 to-cyan-500"
-                    />
-                  </div>
+                  <p className="font-semibold text-slate-800 dark:text-white mb-2">
+                    {skill.name}
+                  </p>
                   <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-2">
                     {skill.description}
                   </p>
@@ -184,7 +153,7 @@ export default function SkillsSection() {
           className="text-center text-sm text-slate-600 dark:text-slate-400 mt-6 flex items-center justify-center gap-1"
         >
           <ChevronRight size={14} className="rotate-90" />
-          Tap a category to filter skills
+          Select a category to filter the skills list
         </motion.p>
       </div>
     </section>
