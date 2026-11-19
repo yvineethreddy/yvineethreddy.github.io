@@ -10,6 +10,7 @@ export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isError, setIsError] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
+  const [showDirectContact, setShowDirectContact] = useState(false)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormState(prev => ({ ...prev, [e.target.name]: e.target.value }))
@@ -209,7 +210,7 @@ export default function Contact() {
                   <AlertCircle size={48} className="text-primary-400 mb-4" />
                 </motion.div>
                 <h4 className="text-xl font-bold mb-2">Oops! Something went wrong</h4>
-                <p className="text-slate-600 dark:text-slate-300 mb-4">Please try again or email me directly at yadanaparthivineethreddy@gmail.com</p>
+                <p className="text-slate-600 dark:text-slate-300 mb-4">Please try again or reveal the direct contact details</p>
               </motion.div>
             )}
           </motion.div>
@@ -223,8 +224,17 @@ export default function Contact() {
           >
             {/* Quick contact methods */}
             <div>
-              <h3 className="text-2xl font-bold mb-6">Quick contact</h3>
-              <div className="space-y-4">
+              <h3 className="text-2xl font-bold mb-4">Quick contact</h3>
+              <button
+                type="button"
+                onClick={() => setShowDirectContact((visible) => !visible)}
+                aria-expanded={showDirectContact}
+                className="inline-flex items-center gap-2 rounded-lg border border-primary-500/50 px-4 py-2 text-sm font-semibold text-primary-600 dark:text-primary-300 hover:bg-primary-500/10 transition-colors"
+              >
+                {showDirectContact ? 'Hide direct contact details' : 'Show direct contact details'}
+              </button>
+              {showDirectContact && (
+              <div className="space-y-4 mt-4">
                 {contactMethods.map((method, i) => {
                   const Icon = method.icon
                   return (
@@ -247,6 +257,7 @@ export default function Contact() {
                   )
                 })}
               </div>
+              )}
             </div>
 
             {/* For Recruiters */}
@@ -297,10 +308,9 @@ export default function Contact() {
               className="glass-effect rounded-xl p-6 border border-slate-200/80 dark:border-slate-600/50"
             >
               <h4 className="text-lg font-bold mb-4">Connect with me</h4>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 gap-3">
                 {[
-                  { name: 'LinkedIn', url: 'https://linkedin.com/in/vineeth-reddy-y' },
-                  { name: 'Email', url: 'mailto:yadanaparthivineethreddy@gmail.com' }
+                  { name: 'LinkedIn', url: 'https://linkedin.com/in/vineeth-reddy-y' }
                 ].map((social, i) => (
                   <motion.a
                     key={i}
