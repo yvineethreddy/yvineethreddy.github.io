@@ -1,25 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import { Download, FileText, Eye } from 'lucide-react'
-
-interface WindowWithDataLayer extends Window {
-  dataLayer?: Array<Record<string, unknown>>
-}
+import React from 'react'
+import { Download } from 'lucide-react'
 
 export default function ResumePreview() {
-  const [downloadCount, setDownloadCount] = useState(0)
-
-  useEffect(() => {
-    const stored = window.localStorage.getItem('resumeDownloadCount')
-    setDownloadCount(stored ? Number(stored) : 0)
-  }, [])
-
-  const handleDownload = () => {
-    const next = downloadCount + 1
-    setDownloadCount(next)
-    window.localStorage.setItem('resumeDownloadCount', String(next))
-    ;(window as WindowWithDataLayer).dataLayer?.push?.({ event: 'resume_download', count: next })
-  }
-
   return (
     <section id="resume" className="py-20 md:py-24 relative overflow-hidden">
       <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-cyan-500/10 to-transparent pointer-events-none" />
@@ -31,21 +13,17 @@ export default function ResumePreview() {
               <span className="gradient-text">ATS-ready resume</span>
             </h2>
             <p className="text-slate-500 dark:text-slate-400 text-lg max-w-3xl leading-relaxed mb-8">
-              Quick access to a polished PDF summary of engineering leadership, backend architecture, and production delivery across healthcare, banking, and trading platforms.
+              A concise overview of my experience in Java development, Spring Boot services, full-stack applications, and cloud-based delivery.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
                 href="/vineeth_resume.pdf"
                 download="Vineeth_Reddy_Resume.pdf"
-                onClick={handleDownload}
                 className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary-600 to-cyan-500 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:brightness-110"
               >
                 <Download size={18} />
                 Download resume
               </a>
-              <span className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900/80 px-4 py-3 text-sm text-slate-300">
-                <Eye size={16} /> Viewed {downloadCount} times locally
-              </span>
             </div>
           </div>
 
