@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion'
-import { ChevronDown, Linkedin, Mail } from 'lucide-react'
-import { powersData } from '../data'
 
 const NAME = 'Vineeth Reddy Yadanaparthi'
 const TITLES = ['Software Engineer', 'Java Backend Engineer', 'Full Stack Developer', 'Microservices Engineer']
@@ -70,36 +68,29 @@ function TaglineReveal() {
       transition={{ duration: 0.8, ease: 'easeOut', delay: 0.4 }}
       className="text-lg sm:text-xl text-slate-400 dark:text-slate-300 font-medium tracking-wide max-w-3xl mx-auto"
     >
-      I design resilient healthcare services and enterprise APIs with observable architecture, scalable Java microservices, and production-safe delivery.
+      I build Java and Spring Boot services, REST APIs, and full-stack features for enterprise applications. My work also includes asynchronous processing, database optimisation, and cloud deployments.
     </motion.p>
   )
 }
 
-function PowersStrip() {
+function TechStackStrip() {
+  const technologies = ['Java', 'Spring Boot', 'REST APIs', 'Microservices', 'React', 'PostgreSQL', 'GCP', 'Kubernetes']
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, delay: 0.8 }}
-      className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-10"
+      transition={{ duration: 0.7, delay: 0.8 }}
+      className="mt-10 flex flex-wrap justify-center gap-2"
+      aria-label="Core technologies"
     >
-      {powersData.map((power, i) => (
-        <motion.div
-          key={power.label}
-          whileHover={{ y: -3, scale: 1.01 }}
-          transition={{ duration: 0.25 }}
-          className="power-badge group"
+      {technologies.map((technology) => (
+        <span
+          key={technology}
+          className="rounded-full border border-white/10 bg-slate-900/70 px-4 py-2 text-sm text-slate-300"
         >
-          <div className="flex items-baseline gap-2">
-            <span className="text-2xl sm:text-3xl font-black gradient-text">
-              {typeof power.value === 'number' && power.value >= 100 ? power.value : `${power.value}%`}
-            </span>
-            <span className="text-sm font-semibold text-slate-400 dark:text-slate-300 group-hover:text-slate-200 transition-colors">
-              {power.label}
-            </span>
-          </div>
-          <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">{power.sub}</p>
-        </motion.div>
+          {technology}
+        </span>
       ))}
     </motion.div>
   )
@@ -125,13 +116,13 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="text-xs uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400 mb-6"
         >
-          KPMG · Healthcare · Production engineering
+          Java · Spring Boot · Full Stack Development
         </motion.p>
 
         <CinematicName />
         <RotatingTitle />
         <TaglineReveal />
-        <PowersStrip />
+        <TechStackStrip />
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
