@@ -27,7 +27,7 @@ export default function Timeline() {
             <span className="gradient-text">Career Journey</span>
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400 max-w-xl">
-            5+ years across healthcare, banking, and trading platforms, with full ownership from development to production support.
+            Experience across healthcare, banking, and full-stack application development.
           </p>
         </motion.div>
 
