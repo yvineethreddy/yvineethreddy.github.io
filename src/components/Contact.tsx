@@ -1,11 +1,10 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { Send, Mail, Phone, MapPin, CheckCircle, AlertCircle } from 'lucide-react'
 
 export default function Contact() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 })
-  const formRef = useRef<HTMLFormElement>(null)
   const [formState, setFormState] = useState({ name: '', email: '', message: '' })
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isError, setIsError] = useState(false)
@@ -269,14 +268,14 @@ export default function Contact() {
             >
               <h4 className="text-lg font-bold mb-4">For Recruiters 🎯</h4>
               <p className="text-slate-700 dark:text-slate-200 text-sm mb-6">
-                I'm actively open to opportunities in backend engineering, microservices architecture, and platform modernization roles.
+                My experience is centred on Java application development, Spring Boot services, and full-stack delivery across enterprise environments.
               </p>
               <div className="space-y-3 mb-6">
                 {[
-                  '5+ years in Java/Spring Boot microservices',
-                  'Platform modernization & performance optimization',
-                  'Camunda BPM workflow automation',
-                  'Banking & trading domain expertise'
+                  '5+ years of software development experience',
+                  'Java, Spring Boot, REST APIs, and microservices',
+                  'Cloud platforms, containers, and CI/CD pipelines',
+                  'Healthcare and enterprise banking experience'
                 ].map((item, i) => (
                   <motion.p
                     key={i}
