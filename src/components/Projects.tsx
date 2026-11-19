@@ -38,10 +38,10 @@ export default function Projects() {
         >
           <p className="text-xs uppercase tracking-[0.2em] text-primary-500 font-medium mb-3">Work</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3">
-            <span className="gradient-text">Featured projects</span>
+            <span className="gradient-text">Representative work</span>
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl">
-            Selected engineering work with clear architecture, measurable outcomes, and maintainable delivery.
+            A look at the kinds of enterprise applications and workflows I have worked on. Client-owned source code is not published here.
           </p>
         </motion.div>
 
@@ -62,7 +62,7 @@ export default function Projects() {
               </div>
 
               <div>
-                <p className="text-xs uppercase tracking-[0.25em] text-slate-500 mb-3">Key decisions</p>
+                <p className="text-xs uppercase tracking-[0.25em] text-slate-500 mb-3">Work covered</p>
                 <ul className="space-y-3 text-slate-300 text-sm">
                   {currentProject.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
