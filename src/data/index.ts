@@ -11,33 +11,33 @@ export const experienceData: ExperienceItem[] = [
     year: 'Apr 2026 – Present',
     role: 'Consultant',
     company: 'KPMG',
-    description: 'Delivering healthcare platform services with Java, Spring Boot, and event-driven architecture. Focused on API contracts, service reliability, and measurable operational improvements.',
+    description: 'Working on an enterprise healthcare pricing platform using Java 17 and Spring Boot. The work includes REST API development, database query analysis, asynchronous processing with Google Cloud Pub/Sub, and batch workflows using Spring Batch. The platform uses AlloyDB and runs on Google Kubernetes Engine.',
     achievements: [
-      'Built resilient healthcare workflow APIs with production-level monitoring',
-      'Standardized fault handling for inter-service communication',
-      'Improved deployment cadence through automation and validation',
+      'Developing and enhancing APIs for pricing and product workflows',
+      'Working with asynchronous batch processing and job-status tracking',
+      'Investigating application behaviour through logs and Kubernetes tooling',
     ]
   },
   {
     year: 'Aug 2024 – Mar 2026',
     role: 'Associate Consultant',
     company: 'Infosys',
-    description: 'Designed enterprise banking microservices and delivered API-first solutions with Spring Boot, asynchronous messaging, and observability.',
+    description: 'Worked on enterprise banking applications using Java and Spring Boot. Experience included containerised application delivery, CI/CD pipelines, and deployment support across Azure and Kubernetes environments.',
     achievements: [
-      'Led service decomposition for a banking middleware platform',
-      'Reduced latency with database tuning and optimized caching',
-      'Introduced resilience patterns for RabbitMQ-based flows',
+      'Worked with Azure Pipelines and later GitHub Actions for deployment automation',
+      'Used Docker and Kubernetes for container-based application delivery',
+      'Used the Red Hat web console to inspect workloads, containers, and application logs',
     ]
   },
   {
     year: 'Oct 2021 – Jul 2024',
     role: 'Java Full Stack Developer',
     company: 'DBQ Technologies',
-    description: 'Built trading automation tools and operations dashboards using Java, React, and event-driven backends. Delivered features from design through support.',
+    description: 'Developed Java full-stack applications and operational tools. Work included backend development, frontend features, and exposure to AWS-based services and authentication integrations.',
     achievements: [
-      'Implemented secure trade lifecycle APIs and reconciliation workflows',
-      'Improved data integrity with schema design and audit logging',
-      'Delivered operator dashboards for real-time visibility',
+      'Built application features using Java and React',
+      'Worked with AWS, OIDC, and single sign-on integrations',
+      'Contributed across development and application support',
     ]
   },
 ]
@@ -59,61 +59,52 @@ export interface ProjectItem {
 
 export const projectsData: ProjectItem[] = [
   {
-    id: 'healthcare-platform',
-    title: 'Healthcare Platform Modernization',
-    description: 'A resilient service foundation for healthcare workflows, data validation, and API integration.',
-    longDescription: 'Modernized a healthcare platform by building Java microservices with Spring Boot, observability, and automated delivery to Kubernetes.',
-    architecture: 'API gateway, event-driven worker pipelines, PostgreSQL storage, and centralized monitoring.',
+    id: 'pricing-platform',
+    title: 'Enterprise Pricing Platform',
+    description: 'Backend services and batch workflows for customer-specific product pricing.',
+    longDescription: 'Professional experience on an enterprise pricing platform. The work involves Java and Spring Boot APIs, pricing workflows, asynchronous processing, and database-backed operations. Source code and client-specific implementation details are not public.',
+    architecture: 'Spring Boot services, REST APIs, AlloyDB, Google Cloud Pub/Sub, Spring Batch, and Google Kubernetes Engine.',
     features: [
-      'Service contract design for patient and claims APIs',
-      'Resilient messaging with RabbitMQ and retry policies',
-      'Schema versioning and database performance tuning',
-      'CI/CD pipelines for automated build, test, and deployment',
+      'API development for product and customer pricing workflows',
+      'Asynchronous processing for batch operations',
+      'Job-status tracking and operational troubleshooting',
+      'Database query analysis and performance-focused changes',
     ],
-    stack: ['Java 21', 'Spring Boot', 'PostgreSQL', 'RabbitMQ', 'GitHub Actions'],
-    image: 'https://images.unsplash.com/photo-1562564055-71e051d8d8c3?w=1200&h=800&fit=crop',
-    links: {
-      github: 'https://github.com/yvineethreddy',
-      live: 'https://yvineethreddy.github.io/'
-    }
+    stack: ['Java 17', 'Spring Boot', 'Spring Batch', 'AlloyDB', 'Pub/Sub', 'GKE'],
+    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&h=800&fit=crop',
+    links: {}
   },
   {
-    id: 'banking-api-framework',
-    title: 'Banking API Framework',
-    description: 'A secure banking service layer for enterprise transactions and workflow orchestration.',
-    longDescription: 'Built a reusable banking API framework with Spring Boot and secure REST design, reducing integration effort for downstream services.',
-    architecture: 'REST services, centralized auth, database access layer, and observability dashboards.',
+    id: 'banking-applications',
+    title: 'Enterprise Banking Applications',
+    description: 'Java application development and deployment support in an enterprise environment.',
+    longDescription: 'Professional experience contributing to enterprise banking applications. The work covered Java and Spring Boot development, container-based environments, CI/CD workflows, and application troubleshooting.',
+    architecture: 'Java and Spring Boot applications delivered through containerised environments and automated pipelines.',
     features: [
-      'Secure REST endpoints with structured payload validation',
-      'Automated error handling and tracing for production support',
-      'Database query optimization with indexes and caching',
-      'Reusable service templates for new product onboarding',
+      'Backend application development and API integration',
+      'Build and deployment automation with Azure Pipelines and GitHub Actions',
+      'Container and workload inspection using Kubernetes tooling',
+      'Application log investigation through the Red Hat web console',
     ],
-    stack: ['Java', 'Spring Boot', 'PostgreSQL', 'OpenTelemetry', 'Docker'],
+    stack: ['Java', 'Spring Boot', 'Azure Pipelines', 'GitHub Actions', 'Docker', 'Kubernetes'],
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop',
+    links: {}
+  },
+  {
+    id: 'full-stack-applications',
+    title: 'Full-Stack Application Development',
+    description: 'Java services and frontend features for business applications.',
+    longDescription: 'Professional experience building full-stack application features with Java and React, with additional exposure to AWS services and identity integrations. Client-owned source code is not published in this portfolio.',
+    architecture: 'Java application services, React user interfaces, and cloud-based identity integrations.',
+    features: [
+      'Backend feature development using Java',
+      'Frontend development using React',
+      'Integration work involving OIDC and single sign-on',
+      'Application development and support',
+    ],
+    stack: ['Java', 'Spring Boot', 'React', 'AWS', 'OIDC', 'SSO'],
     image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=800&fit=crop',
-    links: {
-      github: 'https://github.com/yvineethreddy',
-      live: 'https://yvineethreddy.github.io/'
-    }
-  },
-  {
-    id: 'trading-engine',
-    title: 'Trading Automation Engine',
-    description: 'A trade lifecycle engine with asynchronous processing and operational visibility.',
-    longDescription: 'Created a trading automation engine for event-driven order handling, reconciliation, and workflow approval.',
-    architecture: 'Message broker orchestration with service isolation, audit logging, and dashboard automation.',
-    features: [
-      'Event-based order processing with reliability controls',
-      'Real-time reconciliation and logging for audit compliance',
-      'Approval workflows backed by Camunda BPM',
-      'Operator dashboards for trade monitoring',
-    ],
-    stack: ['Java', 'Spring Boot', 'Camunda', 'RabbitMQ', 'React'],
-    image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&h=800&fit=crop',
-    links: {
-      github: 'https://github.com/yvineethreddy',
-      live: 'https://yvineethreddy.github.io/'
-    }
+    links: {}
   },
 ]
 
@@ -130,113 +121,99 @@ export interface SkillCategory {
 
 export const skillsData: SkillCategory[] = [
   {
-    name: 'Backend & Microservices',
+    name: 'Backend Development',
     color: 'from-blue-500 to-cyan-500',
     icon: '⚙️',
     skills: [
-      { name: 'Java', level: 'Expert', description: 'Java 8–21, Collections, Streams API, Concurrency' },
-      { name: 'Spring Boot', level: 'Expert', description: 'REST APIs, Spring Cloud, Dependency Injection, Spring Security' },
-      { name: 'Microservices', level: 'Advanced', description: 'Service discovery, API Gateway, distributed systems' },
-      { name: 'Resilience4j', level: 'Advanced', description: 'Circuit breakers, retries, timeouts, bulkhead' },
-      { name: 'Hibernate/JPA', level: 'Advanced', description: 'ORM, migrations, query optimization' },
+      { name: 'Java', level: 'Advanced', description: 'Java 17, collections, streams, and application development' },
+      { name: 'Spring Boot', level: 'Advanced', description: 'REST APIs, dependency injection, and service development' },
+      { name: 'Microservices', level: 'Advanced', description: 'Service-based application development and integration' },
+      { name: 'Spring Batch', level: 'Intermediate', description: 'Batch jobs and scheduled processing' },
+      { name: 'Gradle / Maven', level: 'Intermediate', description: 'Build and dependency management' },
     ]
   },
   {
-    name: 'Messaging & Streaming',
-    color: 'from-amber-500 to-orange-500',
-    icon: '📨',
-    skills: [
-      { name: 'RabbitMQ', level: 'Advanced', description: 'Event-driven architecture, queues, exchanges' },
-      { name: 'Apache Kafka', level: 'Intermediate', description: 'Event streaming, producers, consumers' },
-    ]
-  },
-  {
-    name: 'Databases',
-    color: 'from-green-500 to-emerald-500',
-    icon: '🗄️',
-    skills: [
-      { name: 'PostgreSQL', level: 'Expert', description: 'Schema design, query optimization, indexing, transactions' },
-      { name: 'MySQL', level: 'Advanced', description: 'Performance tuning, replication' },
-    ]
-  },
-  {
-    name: 'Observability',
-    color: 'from-violet-500 to-purple-600',
-    icon: '📊',
-    skills: [
-      { name: 'Micrometer', level: 'Advanced', description: 'Metrics, gauges, counters' },
-      { name: 'Prometheus & Grafana', level: 'Advanced', description: 'Monitoring, dashboards, alerting' },
-      { name: 'OpenTelemetry', level: 'Intermediate', description: 'Distributed tracing' },
-    ]
-  },
-  {
-    name: 'Frontend',
+    name: 'Frontend Development',
     color: 'from-pink-500 to-rose-500',
     icon: '🎨',
     skills: [
-      { name: 'React', level: 'Advanced', description: 'Hooks, Context, component lifecycle' },
-      { name: 'TypeScript', level: 'Advanced', description: 'Type safety, interfaces, generics' },
-      { name: 'JavaScript / HTML / CSS', level: 'Advanced', description: 'Semantic HTML, responsive design' },
+      { name: 'React 18', level: 'Intermediate', description: 'Components, hooks, and application UI development' },
+      { name: 'JavaScript', level: 'Intermediate', description: 'Frontend behaviour and API integration' },
+      { name: 'HTML / CSS', level: 'Intermediate', description: 'Responsive application interfaces' },
+      { name: 'Axios', level: 'Intermediate', description: 'HTTP client integration and API calls' },
     ]
   },
   {
-    name: 'Tools & Practices',
-    color: 'from-slate-500 to-slate-700',
-    icon: '🛠️',
+    name: 'Databases and Messaging',
+    color: 'from-green-500 to-emerald-500',
+    icon: '🗄️',
     skills: [
-      { name: 'Git', level: 'Advanced', description: 'Version control, branching, CI/CD integration' },
-      { name: 'Maven', level: 'Advanced', description: 'Build automation, dependency management' },
-      { name: 'Jenkins / GitHub Actions', level: 'Intermediate', description: 'CI/CD pipelines' },
-      { name: 'Docker', level: 'Intermediate', description: 'Containers, Dockerfile basics' },
-      { name: 'Camunda BPM', level: 'Advanced', description: 'Workflow automation, BPMN, DMN' },
-      { name: 'Elasticsearch / Kibana', level: 'Intermediate', description: 'Search, analytics, logging' },
+      { name: 'PostgreSQL / AlloyDB', level: 'Intermediate', description: 'Relational data, SQL, and query analysis' },
+      { name: 'Google Cloud Pub/Sub', level: 'Intermediate', description: 'Asynchronous messaging and event-driven workflows' },
+    ]
+  },
+  {
+    name: 'Cloud and DevOps',
+    color: 'from-violet-500 to-purple-600',
+    icon: '☁️',
+    skills: [
+      { name: 'Google Cloud Platform', level: 'Intermediate', description: 'GKE, Pub/Sub, and cloud-hosted application workflows' },
+      { name: 'Microsoft Azure', level: 'Intermediate', description: 'Azure Pipelines and deployment environments' },
+      { name: 'Docker', level: 'Intermediate', description: 'Containerised application workflows' },
+      { name: 'Kubernetes / GKE', level: 'Intermediate', description: 'Workload inspection, deployment, and troubleshooting' },
+      { name: 'GitHub Actions', level: 'Intermediate', description: 'CI/CD workflow automation' },
+      { name: 'Red Hat Web Console', level: 'Intermediate', description: 'Container, workload, and log inspection' },
+    ]
+  },
+  {
+    name: 'Identity and Integration',
+    color: 'from-slate-500 to-slate-700',
+    icon: '🔐',
+    skills: [
+      { name: 'OIDC / SSO', level: 'Intermediate', description: 'Authentication and identity integration' },
+      { name: 'AWS', level: 'Intermediate', description: 'Cloud platform exposure and application integration' },
+      { name: 'Git', level: 'Intermediate', description: 'Version control and collaborative development' },
     ]
   },
 ]
 
-/** Core stack – at-a-glance tech pills for Skills section */
 export const coreStack = [
   'Java',
   'Spring Boot',
-  'PostgreSQL',
-  'RabbitMQ',
+  'REST APIs',
   'Microservices',
   'React',
-  'TypeScript',
-  'Resilience4j',
-  'Camunda',
+  'PostgreSQL',
+  'AlloyDB',
+  'Google Cloud Pub/Sub',
+  'GKE',
   'Docker',
+  'Kubernetes',
+  'Azure Pipelines',
+  'GitHub Actions',
 ]
 
-/** Domain expertise – "What I do" for Skills section */
 export const domainExpertise = [
   {
-    title: 'Microservices & APIs',
-    short: 'Design and build scalable REST APIs and event-driven services.',
+    title: 'Backend APIs',
+    short: 'Java and Spring Boot service development and API integration.',
     icon: '⚙️',
   },
   {
-    title: 'Resilience & Performance',
-    short: 'Fault tolerance, latency optimization, and production reliability.',
-    icon: '🛡️',
+    title: 'Batch and Asynchronous Processing',
+    short: 'Scheduled jobs, messaging workflows, and operational status tracking.',
+    icon: '🔄',
   },
   {
-    title: 'Data & Storage',
-    short: 'Schema design, query tuning, and transactional integrity.',
+    title: 'Database Work',
+    short: 'SQL analysis, relational data, and query performance investigation.',
     icon: '🗄️',
   },
   {
-    title: 'Observability',
-    short: 'Metrics, tracing, and monitoring for production systems.',
-    icon: '📊',
+    title: 'Cloud and Delivery',
+    short: 'Containerised applications, CI/CD pipelines, and deployment support.',
+    icon: '☁️',
   },
 ]
 
-/** Superhero-style "powers" / core strengths for cinematic reveal */
-export const powersData = [
-  { label: 'Resilience', value: 98, sub: 'Fault-tolerant systems' },
-  { label: 'Scale', value: 95, sub: 'High-throughput microservices' },
-  { label: 'Performance', value: 92, sub: 'Latency & query optimization' },
-  { label: 'Uptime', value: 99.99, sub: 'Production reliability' },
-  { label: 'Ownership', value: 100, sub: 'End-to-end delivery' },
-]
+export const powersData = []
