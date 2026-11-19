@@ -39,4 +39,3 @@ My work has included healthcare and enterprise application development, pricing 
 
 - Portfolio: [yvineethreddy.github.io](https://yvineethreddy.github.io/)
 - LinkedIn: [vineeth-reddy-y](https://linkedin.com/in/vineeth-reddy-y)
-- Email: [yadanaparthivineethreddy@gmail.com](mailto:yadanaparthivineethreddy@gmail.com)
