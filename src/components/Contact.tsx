@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Send, Mail, Phone, MapPin, CheckCircle, AlertCircle } from 'lucide-react'
+import { Send, Mail, Phone, CheckCircle, AlertCircle } from 'lucide-react'
 
 export default function Contact() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 })
@@ -68,12 +68,6 @@ export default function Contact() {
       value: '+91 7036546590',
       href: 'tel:+917036546590'
     },
-    {
-      icon: MapPin,
-      label: 'Location',
-      value: 'Bangalore, India',
-      href: 'https://maps.google.com/?q=Bangalore,India'
-    }
   ]
 
   return (
