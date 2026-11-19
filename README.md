@@ -1,68 +1,42 @@
-# Vineeth Reddy Yadanaparthi
+# Vineeth Reddy — Portfolio
 
-Java Full Stack Developer working on enterprise applications, backend services, and cloud-based delivery.
+Personal portfolio website built with React, TypeScript, Vite, Tailwind CSS and Framer Motion.
 
-I enjoy building APIs, working through production issues, improving database performance, and making services easier to operate. My day-to-day work spans Java and Spring Boot, SQL, asynchronous processing, frontend development, containers, and CI/CD.
+**Live site:** https://yvineethreddy.github.io/
 
-- **Current role:** Consultant
-- **Based in:** India
-- **Portfolio:** https://yvineethreddy.github.io/
-- **LinkedIn:** https://linkedin.com/in/vineeth-reddy-y
+## Run locally
 
-## Technical skills
+Requirements: Node.js and npm.
 
-### Backend
-- Java
-- Spring Boot
-- Spring Batch
-- REST API development
-- Microservices
-- Gradle and Maven
+```bash
+npm install
+npm run dev
+```
 
-### Frontend
-- React
-- JavaScript
-- HTML and CSS
+## Production build
 
-### Databases and messaging
-- PostgreSQL
-- AlloyDB
-- SQL query analysis and optimization
-- Google Cloud Pub/Sub
+```bash
+npm run build
+npm run preview
+```
 
-### Cloud, containers and delivery
-- Google Cloud Platform
-- Google Kubernetes Engine (GKE)
-- Kubernetes
-- Docker
-- Azure Pipelines
-- GitHub Actions
-- Red Hat Web Console for container and log inspection
+## Deployment
 
-### Engineering practices
-- API integration and troubleshooting
-- Asynchronous and batch processing
-- Application and container log analysis
-- CI/CD and deployment support
-- Production issue investigation
+The site is configured for GitHub Pages. The GitHub Actions workflow in `.github/workflows/deploy.yml` builds the Vite application and publishes the generated `dist` directory to the `gh-pages` branch.
 
-## Experience
+## Main sections
 
-- **KPMG** — Consultant
-- **Infosys** — Associate Consultant
-- **DBQ Technologies** — Java Full Stack Developer
+- Introduction and professional summary
+- Experience
+- Technical skills
+- Selected work
+- Resume and contact details
 
-## Portfolio
+## Technology
 
-My portfolio site contains an overview of my background and selected work:
+- React 18 and TypeScript
+- Vite
+- Tailwind CSS
+- Framer Motion
+- React Router
 
-**https://yvineethreddy.github.io/**
-
-## Contact
-
-- Email: yadanaparthivineethreddy@gmail.com
-- LinkedIn: https://linkedin.com/in/vineeth-reddy-y
-
----
-
-I keep this repository focused on my portfolio and the technologies I work with.
